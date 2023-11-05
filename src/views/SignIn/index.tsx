@@ -12,7 +12,7 @@ interface Props {
   apr?: any
 }
 
-const Global: React.FC<Props> = () => {
+const SignIn: React.FC<Props> = () => {
   const history = useHistory()
   const size: Size = useWindowSize()
   const isMobile = size.width && size.width < 600
@@ -31,4 +31,4 @@ const Global: React.FC<Props> = () => {
   )
 }
 
-export default React.memo(Global, (prevProps, nextProps) => prevProps.apr === nextProps.apr)
+export default React.memo(SignIn, (prevProps, nextProps) => prevProps.apr === nextProps.apr)

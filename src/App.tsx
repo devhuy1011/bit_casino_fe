@@ -6,6 +6,8 @@ import Loading from 'components/LoadingNew'
 
 /** Page */
 import HomePage from 'views/Global'
+import SignPage from 'views/SignIn'
+import LoginPage from 'views/Login'
 
 import history from './routerHistory'
 import GlobalStyle from './style/Global'
@@ -31,6 +33,12 @@ const App: React.FC = () => {
         <>
           <Route exact path="/">
             <HomePage />
+          </Route>
+          <Route exact path="/login">
+            <LoginPage />
+          </Route>
+          <Route exact path="/sign_in">
+            <SignPage />
           </Route>
         </>
       </Router>

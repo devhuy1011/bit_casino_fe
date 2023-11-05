@@ -1,0 +1,16 @@
+{
+  "presets": [
+    "module:typescript-base-babel-preset"
+  ],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+        "root": [
+          "./src"
+        ]
+      }
+    ]
+  ]
+}

@@ -22,6 +22,7 @@ const Global: React.FC<Props> = () => {
   }
 
   return (
+    
     <S.Wrapper>
       <Menu />
       <S.Header>

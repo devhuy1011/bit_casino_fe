@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 
 import BigLogo from 'assets/logo/big_logo.png'
+import SmallLogo from 'assets/logo/small_logo.png'
 import EstLogo from 'assets/images/estcube.svg'
 import VipLogo from 'assets/images/sidebar_vip.png'
 import SlotLogo from 'assets/images/sidebar_video-slots.png'
@@ -21,6 +22,7 @@ import BonusLogo from 'assets/images/sidebar_bonus-buyin.png'
 import LoyaltyLogo from 'assets/images/sidebar_loyalty.png'
 import RafLogo from 'assets/images/sidebar_raf.png'
 import LiveRptLogo from 'assets/images/sidebar_live-rtp.png'
+import ArrowLogo from 'assets/logo/Arrow.png'
 
 import NavbarElement from 'components/Navbar_Element'
 import { Image } from 'antd'
@@ -155,15 +157,31 @@ const dataNav3 = [
 
 const Menu: React.FC<Props> = ({ isShow }) => {
   const history = useHistory()
-  const [isHide, setIsHide] = useState(false);
+  const [isHide, setIsHide] = useState(false)
 
   const handleHideNavbar = () => {
-    setIsHide(true);
+    setIsHide(!isHide)
   }
 
-  return (
+  return isHide ? (
+    <S.SmallNav>
+      <S.LogoSmall>
+        <Image src={SmallLogo} width={30} height={40} preview={false} />
+      </S.LogoSmall>
+      <S.ArrowContainer onClick={handleHideNavbar}>
+        <S.ArrowPre>
+          <Image src={ArrowLogo} width={12} height={12} preview={false} />
+        </S.ArrowPre>
+      </S.ArrowContainer>
+    </S.SmallNav>
+  ) : (
     <S.Box>
       <S.Container>
+        <S.ArrowContainer onClick={handleHideNavbar}>
+          <S.Arrow className="hidden">
+            <Image src={ArrowLogo} width={12} height={12} preview={false} />
+          </S.Arrow>
+        </S.ArrowContainer>
         <S.Logo>
           <Image src={BigLogo} width={150} preview={false} />
         </S.Logo>

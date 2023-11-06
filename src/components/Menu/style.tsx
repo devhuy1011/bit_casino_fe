@@ -11,6 +11,7 @@ export const Container = styled.div`
   width: auto;
   padding: 1.25rem;
   background-color: #f2f2f2;
+  position: relative;
 
   > hr {
     border-top: 1px solid #e0e0e0;
@@ -22,6 +23,14 @@ export const Container = styled.div`
   }
   .hr-line {
     margin-top: 25px;
+  }
+  &:hover {
+    .hidden {
+      display: flex;
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.3s ease-in-out;
+    }
   }
 `
 
@@ -161,4 +170,62 @@ export const ContactDetail = styled.div`
   position: relative;
   cursor: pointer;
   height: 18px;
+`
+export const Arrow = styled.div`
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  top: 20px;
+  right: -10px;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  width: 24px;
+  height: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  & div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    > img {
+      transform: rotate(180deg);
+    }
+  }
+`
+export const ArrowContainer = styled.div`
+  width: auto;
+  .hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+  }
+`
+
+export const SmallNav = styled.div`
+  width: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+`
+export const ArrowPre = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  width: 24px;
+  height: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  & div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    > img {
+    }
+  }
+`
+export const LogoSmall = styled.div`
+  width: auto;
 `

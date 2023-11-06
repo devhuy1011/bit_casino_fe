@@ -25,7 +25,7 @@ const Global: React.FC<Props> = () => {
     <S.Wrapper>
       <Menu />
       <S.Header>
-        <h1>Hello World!!</h1>
+        <h1>Home Page</h1>
       </S.Header>
     </S.Wrapper>
   )

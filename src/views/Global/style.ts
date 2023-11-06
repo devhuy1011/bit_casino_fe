@@ -8,9 +8,11 @@ const Wrapper = styled.div`
   button {
     border: none;
   }
+  padding: 0;
+  margin: 0;
 `
 const Header = styled.div`
-  width: 100%;
+  width: auto;
   height: 100%;
   button {
     border: none;

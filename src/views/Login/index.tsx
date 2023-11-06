@@ -5,6 +5,10 @@ import useWindowSize, { Size } from 'hooks/useWindowSize'
 import LogoB from 'assets/logo/big_logo.png'
 import Foxy from 'assets/signup/metamask.svg'
 import Google from 'assets/signup/google-oauth2.svg'
+import Banner from 'assets/signup/Log-in4.png'
+import ImgLeft from 'assets/signup/plane (1) 2.png'
+import ImgCenter from 'assets/signup/slots.png'
+import ImgRight from 'assets/signup/bombay-club-icon.png'
 
 import Menu from 'components/Menu'
 import { Image, Button, Input, Checkbox } from 'antd'
@@ -84,14 +88,66 @@ const Login: React.FC<Props> = () => {
             </S.Auth>
           ) : null}
           <Button disabled type="primary" danger>
-            <S.Login>
-              Đăng nhập
-            </S.Login>
+            <S.Login>Đăng nhập</S.Login>
           </Button>
+          <hr />
         </S.Form>
+        <S.Footer>
+          <a href="/Register">Quên mật khẩu?</a>
+          <hr />
+          <S.Register>
+            <p>Bạn không có tài khoản? </p>
+            <a href="/Register"> Tạo tài khoản</a>
+          </S.Register>
+          <S.Intro>
+            <p>
+              Trang web này được bảo vệ bởi reCAPCHA và
+              <a href="/about">Chính sách quyền riêng tư</a>
+              và
+              <a href="/contactUs">Điều khoản dịch vụ</a>
+              được áp dụng của google.
+            </p>
+          </S.Intro>
+        </S.Footer>
       </S.Title>
       <S.Background>
-        <h1>Abc xyZ</h1>
+        <S.Container>
+          <S.BannerImg>
+            <Image src={Banner} width={647} height={667} preview={false} />
+          </S.BannerImg>
+          <hr />
+          <h1>Thưởng thức viện chơi game cao cấp</h1>
+          <hr />
+          <S.RightFooter>
+            <S.Left>
+              <S.LeftImg>
+                <Image src={ImgLeft} width={40} height={40} preview={false} />
+              </S.LeftImg>
+              <S.LeftTitle>
+                <h2>Trải nghiệm VIP</h2>
+                <p>Truy cập vào các sự kiện chỉ dành cho người được mời vào thảm đỏ</p>
+              </S.LeftTitle>
+            </S.Left>
+            <S.Center>
+              <S.CenterImg>
+                <Image src={ImgCenter} width={40} height={40} preview={false} />
+              </S.CenterImg>
+              <S.CenterTitle>
+                <h2>Hơn 3600 trò chơi</h2>
+                <p>Khám phá menu với hơn 3.600 trò slot, trò chơi trên bàn và trò chơi trực tiếp</p>
+              </S.CenterTitle>
+            </S.Center>
+            <S.Right>
+              <S.RightImg>
+                <Image src={ImgRight} width={40} height={40} preview={false} />
+              </S.RightImg>
+              <S.RightTitle>
+                <h2>Câu lạc bộ BomBay</h2>
+                <p>Khám phá một bộ trò chơi trực tiếp độc quyền với giới hạn đặt cược vô song</p>
+              </S.RightTitle>
+            </S.Right>
+          </S.RightFooter>
+        </S.Container>
       </S.Background>
     </S.Wrapper>
   )

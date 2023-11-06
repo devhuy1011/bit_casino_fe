@@ -34,7 +34,7 @@ export const Form = styled.div`
   .ant-btn-primary.ant-btn-dangerous:disabled {
     color: #fff;
     background-color: rgb(214, 55, 65);
-    opacity: .35;
+    opacity: 0.35;
   }
 `
 export const Account = styled.div`
@@ -148,15 +148,115 @@ export const Span = styled.div`
   text-align: center;
   justify-items: center;
 `
+export const Logo = styled.div`
+  max-width: auto;
+  height: auto;
+`
+export const Footer = styled.div`
+  width: 100%;
+  height: auto;
+  > a {
+    font-size: 15px;
+    text-decoration: none;
+    color: rgb(214, 55, 65);
+    opacity: 0.8;
+  }
+  > hr {
+    border: none;
+  }
+`
+export const Register = styled.div`
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  > p {
+    font-size: 13px;
+    opacity: 0.75;
+  }
+  > a {
+    font-size: 13px;
+    text-decoration: none;
+    opacity: 0.75;
+    color: rgb(214, 55, 65);
+  }
+`
+export const Intro = styled.div`
+  width: 340px;
+  height: 48px;
+  display: block;
+  opacity: .7;
+  > p {
+    font-size: 12px;
+    gap: 10px;
+    > a {
+      text-decoration: none;
+      gap: 10px;
+      color: #000;
+    }
+  }
+`
 export const Background = styled.div`
   width: 100%;
   height: 100vh;
-  text-align: center;
   background-image: url(${background});
   background-size: cover;
   background-repeat: no-repeat;
 `
-export const Logo = styled.div`
-  max-width: auto;
+export const Container = styled.div`
+  width: 100%px;
   height: auto;
+`
+export const BannerImg = styled.div`
+  width: 100%;
+  height: auto;
+  display: block;
+`
+export const RightFooter = styled.div`
+  width: 100%;
+  height: auto;
+  display: flex;
+`
+export const Left = styled.div`
+  width: 35%;
+  height: auto;
+  display: flex;
+`
+export const LeftImg = styled.div`
+width: 40px;
+height: 40px;
+`
+export const LeftTitle = styled.div`
+  width: 35%;
+  height: auto;
+  display: block;
+`
+export const Center = styled.div`
+width: 35%;
+height: auto;
+display: flex;
+`
+export const CenterImg = styled.div`
+width: 40px;
+height: 40px;
+`
+export const CenterTitle = styled.div`
+width: 35%;
+height: auto;
+display: block;
+`
+export const Right = styled.div`
+width: 35%;
+height: auto;
+display: flex;
+`
+export const RightImg = styled.div`
+width: 40px;
+height: 40px;
+`
+export const RightTitle = styled.div`
+width: 35%;
+height: auto;
+display: block;
 `

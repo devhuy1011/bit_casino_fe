@@ -11,7 +11,6 @@ import LoginPage from 'views/Login'
 import history from './routerHistory'
 import GlobalStyle from './style/Global'
 
-
 const App: React.FC = () => {
   return (
     <>

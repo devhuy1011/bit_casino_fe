@@ -175,7 +175,7 @@ export const Container2 = styled.div`
     }
     .prev-arrow {
       background-image: url(${Arrow});
-      top: 40%;
+      top: 25%;
       left: -15px;
       transform: rotate(180deg);
 
@@ -205,7 +205,7 @@ export const Container2 = styled.div`
     }
     .next-arrow {
       background-image: url(${Arrow});
-      bottom: 35%;
+      top: 30%;
       right: -5px;
 
       display: flex;

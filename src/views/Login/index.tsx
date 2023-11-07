@@ -117,7 +117,6 @@ const Login: React.FC<Props> = () => {
           </S.BannerImg>
           <hr />
           <h1>Thưởng thức viện chơi game cao cấp</h1>
-          <hr />
           <S.RightFooter>
             <S.Left>
               <S.LeftImg>

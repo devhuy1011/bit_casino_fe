@@ -4,7 +4,7 @@ import background from 'assets/signup/bg-login.png'
 
 export const Wrapper = styled.div`
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   button {
     border: none;
@@ -199,7 +199,7 @@ export const Intro = styled.div`
 `
 export const Background = styled.div`
   width: 100%;
-  height: 100vh;
+  height: auto;
   padding: 32px;
   top: 0;
   right: 0;
@@ -209,6 +209,14 @@ export const Background = styled.div`
   background-repeat: no-repeat;
 `
 export const Container = styled.div`
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  > hr {
+    border: none;
+  }
   > h1 {
     margin: 0 0 4.25rem;
     font-size: 1.5rem;
@@ -218,12 +226,10 @@ export const Container = styled.div`
   }
 `
 export const BannerImg = styled.div`
-  position: relative;
-  z-index: 1;
-  display: block !important;
-  height: 13.25rem;
-  width: auto;
-  max-width: 45.75rem;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
   margin: 2rem auto;
 `
 export const RightFooter = styled.div`

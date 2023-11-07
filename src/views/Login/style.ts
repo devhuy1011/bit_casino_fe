@@ -201,9 +201,10 @@ export const Background = styled.div`
   width: 100%;
   height: auto;
   padding: 32px;
-  top: 0;
-  right: 0;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-image: url(${background});
   background-size: cover;
   background-repeat: no-repeat;
@@ -219,7 +220,7 @@ export const Container = styled.div`
   }
   > h1 {
     margin: 0 0 4.25rem;
-    font-size: 1.5rem;
+    font-size: 3.5rem;
     line-height: 2rem;
     font-weight: 500;
     text-align: center;

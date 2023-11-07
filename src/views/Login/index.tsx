@@ -93,11 +93,11 @@ const Login: React.FC<Props> = () => {
           <hr />
         </S.Form>
         <S.Footer>
-          <a href="/Register">Quên mật khẩu?</a>
+          <a href="/register">Quên mật khẩu?</a>
           <hr />
           <S.Register>
             <p>Bạn không có tài khoản? </p>
-            <a href="/Register"> Tạo tài khoản</a>
+            <a href="/register"> Tạo tài khoản</a>
           </S.Register>
           <S.Intro>
             <p>

@@ -186,7 +186,7 @@ export const Intro = styled.div`
   width: 340px;
   height: 48px;
   display: block;
-  opacity: .7;
+  opacity: 0.7;
   > p {
     font-size: 12px;
     gap: 10px;
@@ -200,63 +200,116 @@ export const Intro = styled.div`
 export const Background = styled.div`
   width: 100%;
   height: 100vh;
+  padding: 32px;
+  top: 0;
+  right: 0;
+  display: block;
   background-image: url(${background});
   background-size: cover;
   background-repeat: no-repeat;
 `
 export const Container = styled.div`
-  width: 100%px;
-  height: auto;
+  > h1 {
+    margin: 0 0 4.25rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 500;
+    text-align: center;
+  }
 `
 export const BannerImg = styled.div`
-  width: 100%;
-  height: auto;
-  display: block;
+  position: relative;
+  z-index: 1;
+  display: block !important;
+  height: 13.25rem;
+  width: auto;
+  max-width: 45.75rem;
+  margin: 2rem auto;
 `
 export const RightFooter = styled.div`
-  width: 100%;
-  height: auto;
   display: flex;
+  gap: 1.5rem;
+  align-items: start;
+  justify-content: center;
+  padding: 0 !important;
+  margin: 0 !important;
+  list-style-type: none;
 `
 export const Left = styled.div`
-  width: 35%;
-  height: auto;
-  display: flex;
+  display: grid;
+  gap: 0.75rem;
+  grid-auto-flow: column;
+  max-width: 14.5rem;
 `
 export const LeftImg = styled.div`
-width: 40px;
-height: 40px;
+  display: block;
+  width: 2.5rem;
+  height: auto;
 `
 export const LeftTitle = styled.div`
-  width: 35%;
-  height: auto;
-  display: block;
+  display: grid;
+  gap: 0.75rem;
+  > h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+  }
+  > p {
+    margin: 0;
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
 `
 export const Center = styled.div`
-width: 35%;
-height: auto;
-display: flex;
+  display: grid;
+  gap: 0.75rem;
+  grid-auto-flow: column;
+  max-width: 14.5rem;
 `
 export const CenterImg = styled.div`
-width: 40px;
-height: 40px;
+  display: block;
+  width: 2.5rem;
+  height: auto;
 `
 export const CenterTitle = styled.div`
-width: 35%;
-height: auto;
-display: block;
+  display: grid;
+  gap: 0.75rem;
+  > h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+  }
+  > p {
+    margin: 0;
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
 `
 export const Right = styled.div`
-width: 35%;
-height: auto;
-display: flex;
+  display: grid;
+  gap: 0.75rem;
+  grid-auto-flow: column;
+  max-width: 14.5rem;
 `
 export const RightImg = styled.div`
-width: 40px;
-height: 40px;
+  display: block;
+  width: 2.5rem;
+  height: auto;
 `
 export const RightTitle = styled.div`
-width: 35%;
-height: auto;
-display: block;
+  display: grid;
+  gap: 0.75rem;
+  > h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+  }
+  > p {
+    margin: 0;
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
 `

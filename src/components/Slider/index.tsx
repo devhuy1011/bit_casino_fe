@@ -21,6 +21,7 @@ const SlickSlider: React.FC<Props> = ({ url, title, link, subTitle, details }) =
 
   const SamplePrevArrow = (props) => {
     const { onClick } = props
+    console.log('abc', onClick)
     return <Button className="prev-arrow" onClick={onClick} />
   }
 
@@ -31,50 +32,31 @@ const SlickSlider: React.FC<Props> = ({ url, title, link, subTitle, details }) =
 
   const settings = {
     dots: false,
-    infinite: true,
+    infinite: false,
     speed: 500,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToShow: 5,
+    slidesToScroll: 4,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     swipeToSlide: true,
   }
 
   return (
-    //   <S.Container onClick={() => history.push(`${link}`)}>
-    //     <S.Element>
-    //       <Image className="sidebar_icon" src={url} width={32} height={32} preview={false} />
-    //       <S.VipTitle>
-    //         <p>{title}</p>
-    //         <p>{subTitle}</p>
-    //         <span>{details}</span>
-    //       </S.VipTitle>
-    //     </S.Element>
-    //   </S.Container>
-
     <S.Box>
       <S.Container>
         <Slider {...settings}>
-          <div>
-            <h3>1</h3>
-          </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
+          <S.Container onClick={() => history.push(`${link}`)}>
+            <S.Element>
+              <Image className="sidebar_icon" src={url} width={32} height={32} preview={false} />
+              <S.VipTitle>
+                <p>{title}</p>
+                <p>{subTitle}</p>
+                <span>{details}</span>
+              </S.VipTitle>
+            </S.Element>
+          </S.Container>
         </Slider>
       </S.Container>
     </S.Box>

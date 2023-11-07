@@ -165,7 +165,7 @@ const Menu: React.FC<Props> = ({ isShow }) => {
 
   return isHide ? (
     <S.SmallNav>
-      <S.LogoSmall>
+      <S.LogoSmall onClick={() => history.push('/')}>
         <Image src={SmallLogo} width={30} height={40} preview={false} />
       </S.LogoSmall>
       <S.ArrowContainer onClick={handleHideNavbar}>
@@ -182,7 +182,7 @@ const Menu: React.FC<Props> = ({ isShow }) => {
             <Image src={ArrowLogo} width={12} height={12} preview={false} />
           </S.Arrow>
         </S.ArrowContainer>
-        <S.Logo>
+        <S.Logo onClick={() => history.push('/')}>
           <Image src={BigLogo} width={150} preview={false} />
         </S.Logo>
         <hr />

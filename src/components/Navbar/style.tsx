@@ -4,8 +4,11 @@ import styled from 'styled-components'
 export const BoxContainer = styled.div`
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
+  top: 0px;
   z-index: 10;
+  overflow: auto;
+
+  background-color: #fff;
 `
 
 export const Box = styled.div`

@@ -15,14 +15,17 @@ export const Container = styled.div`
   width: 100%;
   margin: 15px auto;
   background-color: gray;
+  .ant-btn {
+    height: 24px;
+    width: 24px;
+    padding: 0;
+  }
   .slick-slider {
     .prev-arrow,
     .next-arrow {
       background-repeat: no-repeat;
       background-position: center;
-      background-size: contain;
-      width: 30px;
-      height: 30px;
+      background-size: 12px;
       position: absolute;
       bottom: 3%;
       transform: translateY(-50%);
@@ -35,8 +38,24 @@ export const Container = styled.div`
     }
     .prev-arrow {
       background-image: url(${Arrow});
-      bottom: -20%;
-      left: -18%;
+      top: 30%;
+      left: -15px;
+      transform: rotate(180deg);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border-radius: 50%;
+      background-color: #f2f2f2;
+      width: 24px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+      opacity: 1;
+      :where(.css-dev-only-do-not-override-2i2tap).ant-btn-default:not(:disabled):not(.ant-btn-disabled):hover {
+        color: #000;
+        border-color: transparent;
+      }
+
       @media screen and (max-width: 1440px) {
         bottom: -57%;
         @media screen and (max-width: 1024px) {
@@ -49,9 +68,18 @@ export const Container = styled.div`
     }
     .next-arrow {
       background-image: url(${Arrow});
-      left: -13%;
-      bottom: -18.5%;
-      transform: rotate(180deg);
+      bottom: 15%;
+      right: -15px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border-radius: 50%;
+      background-color: #f2f2f2;
+      width: 24px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+      opacity: 1;
       @media screen and (max-width: 1440px) {
         bottom: -55%;
         @media screen and (max-width: 1024px) {
@@ -63,4 +91,7 @@ export const Container = styled.div`
       }
     }
   }
+`
+export const Element = styled.div`
+  
 `

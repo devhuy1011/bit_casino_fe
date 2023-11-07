@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 export const Box = styled.div`
   width: auto;
-  height: 100%;
+  height: auto;
   box-sizing: border-box;
   border: 0 solid #e5e7eb;
 `
@@ -39,6 +39,7 @@ export const Container = styled.div`
 export const Logo = styled.div`
   width: 200px;
   margin-bottom: 40px;
+  cursor: pointer;
 `
 
 export const PartnerContainer = styled.div`
@@ -209,6 +210,8 @@ export const SmallNav = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  position: fixed;
+  top: 25px;
 `
 export const ArrowPre = styled.div`
   display: flex;
@@ -230,4 +233,5 @@ export const ArrowPre = styled.div`
 `
 export const LogoSmall = styled.div`
   width: auto;
+  cursor: pointer;
 `

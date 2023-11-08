@@ -3,14 +3,14 @@ import styled from 'styled-components'
 
 export const Box = styled.div`
   width: auto;
-  height: auto;
+  height: 100%;
   box-sizing: border-box;
   border: 0 solid #e5e7eb;
 `
 
 export const Container = styled.div`
   width: auto;
-  height: 100%;
+  height: auto;
   padding: 1.25rem;
   background-color: #f2f2f2;
   position: relative;

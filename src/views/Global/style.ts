@@ -147,7 +147,9 @@ export const Container = styled.div`
 
 export const Container2 = styled.div`
   width: 100%;
-  position: relative;
+  img {
+    position: relative;
+  }
   .ant-btn {
     height: 24px;
     width: 24px;
@@ -156,6 +158,11 @@ export const Container2 = styled.div`
   .roomGame {
     border-radius: 10px;
     cursor: pointer;
+    :hover {
+      .mask {
+        opacity: 1;
+      }
+    }
   }
   .slick-slider {
     .prev-arrow,
@@ -227,9 +234,6 @@ export const Container2 = styled.div`
         }
       }
     }
-    .mask:hover {
-      opacity: 1;
-    }
   }
 `
 export const OverLay = styled.div`
@@ -242,10 +246,7 @@ export const OverLay = styled.div`
   background: rgba(0, 0, 0, 0.5);
   cursor: pointer;
   opacity: 0;
-  width: 202px;
-  height: 151px;
   border-radius: 15px;
-  z-index: 1;
 `
 export const PlayContainer = styled.div`
   width: 50px;
@@ -259,5 +260,12 @@ export const PlayContainer = styled.div`
   align-items: center;
   > img {
     position: absolute;
+  }
+`
+
+export const ImgContainer = styled.div`
+  position: relative;
+  .mask:hover {
+    opacity: 1;
   }
 `

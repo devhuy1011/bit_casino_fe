@@ -201,6 +201,29 @@ const Global: React.FC<Props> = () => {
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     swipeToSlide: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+    ],
   }
   const settings2 = {
     dots: false,
@@ -213,6 +236,29 @@ const Global: React.FC<Props> = () => {
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     swipeToSlide: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+    ],
   }
 
   const openTab = (link) => {
@@ -266,12 +312,14 @@ const Global: React.FC<Props> = () => {
             <Slider {...settings2}>
               {gameRooms.map((data) => (
                 <S.Container2 onClick={() => history.push(`${data.link}`)}>
-                  <Image className="roomGame" src={data.url} width={202} preview={false} />
-                  <S.OverLay className="mask">
-                    <S.PlayContainer>
-                      <Image className="roomGame" src={PlayTriangleLogo} width={20} preview={false} />
-                    </S.PlayContainer>
-                  </S.OverLay>
+                  <S.ImgContainer>
+                    <Image className="roomGame" src={data.url} preview={false} />
+                    <S.OverLay className="mask">
+                      <S.PlayContainer>
+                        <Image className="roomGame" src={PlayTriangleLogo} width={20} preview={false} />
+                      </S.PlayContainer>
+                    </S.OverLay>
+                  </S.ImgContainer>
                   <p>{data.title}</p>
                   <p>{data.sub}</p>
                 </S.Container2>

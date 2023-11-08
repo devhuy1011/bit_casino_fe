@@ -50,11 +50,9 @@ const SlickSlider: React.FC<Props> = ({ url, title, link, subTitle, details }) =
           <S.Container onClick={() => history.push(`${link}`)}>
             <S.Element>
               <Image className="sidebar_icon" src={url} width={32} height={32} preview={false} />
-              <S.VipTitle>
                 <p>{title}</p>
                 <p>{subTitle}</p>
                 <span>{details}</span>
-              </S.VipTitle>
             </S.Element>
           </S.Container>
         </Slider>

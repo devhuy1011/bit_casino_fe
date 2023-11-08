@@ -26,9 +26,12 @@ import PlayTriangleLogo from 'assets/images/play-triangle.svg'
 import BombayBaccaratImg from 'assets/images/BombayClub-Speed-Baccarat_490x368px.png'
 import BombayBlackJackImg from 'assets/images/BombayClubBlackjack_490x368px.png'
 import BombayRouletteImg from 'assets/images/BombayClubRoulette_490x368px.png'
+import CustomBox from 'components/CustomBox'
+import { NEW_GAME } from './constant'
 
 /** Style */
 import * as S from './style'
+
 
 interface Props {
   apr?: any
@@ -276,6 +279,24 @@ const Global: React.FC<Props> = () => {
                   <p>{data.sub}</p>
                 </S.Container2>
               ))}
+            </Slider>
+          </S.Container2>
+          <h1>Trò chơi casino với Live RTF</h1>
+          <S.Container2>
+            <Slider {...settings2}>
+                {gameRooms.map((data) => (
+                  <CustomBox link ={data.link} url={data.url} title={data.title} sub={data.sub}/>
+                ))
+                }
+            </Slider>
+          </S.Container2>
+          <h1>Trò chơi mới bạn có thể thích</h1>
+          <S.Container2>
+            <Slider {...settings2}>
+                {NEW_GAME.map((data) => (
+                  <CustomBox link ={data.link} url={data.url} title={data.title} sub={data.sub}/>
+                ))
+                }
             </Slider>
           </S.Container2>
         </S.ContainerWrapper>

@@ -8,17 +8,19 @@ import * as S from './style'
 
 interface Props {
   value?: string
+  isShow?: boolean
+  backgroundColor?: string
 }
 const { Search } = Input
 
-const NavbarElement: React.FC<Props> = ({ value }) => {
+const NavbarElement: React.FC<Props> = ({ value, isShow, backgroundColor }) => {
   const history = useHistory()
 
   return (
-    <S.BoxContainer>
+    <S.BoxContainer style={{ backgroundColor }} className={isShow ? 'none' : 'sticky'}>
       <S.Box>
-        <S.Container>
-          <Space.Compact size="large" className="search">
+        <S.Container className={isShow ? 'default-nav' : 'flex-box'}>
+          <Space.Compact size="large" className={isShow ? 'search active' : 'hidden'}>
             <Input style={{ width: 500 }} addonBefore={<SearchOutlined />} placeholder='Hãy thử "Baccarat"' />
           </Space.Compact>
           <S.ButtonHandlerContainer>

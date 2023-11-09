@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import { Button, Image } from 'antd'
 
@@ -179,6 +179,7 @@ const Global: React.FC<Props> = () => {
   const history = useHistory()
   const size: Size = useWindowSize()
   const isMobile = size.width && size.width < 600
+  const [isHide, setIsHide] = useState(false)
 
   const SamplePrevArrow = (props) => {
     const { onClick } = props
@@ -265,69 +266,90 @@ const Global: React.FC<Props> = () => {
     window.open(link)
   }
 
+  console.log('isHive', isHide)
+
   return (
     <S.Wrapper>
-      <Menu />
+      <S.WrapperContainer className={isHide ? 'default' : 'flex-box'}>
+        {isHide ? (
+          <S.MenuContainer>
+            <Menu
+              isShow={isHide}
+              handleHideNavbar={() => {
+                setIsHide(!isHide)
+              }}
+            />
+            <NarBar isShow />
+          </S.MenuContainer>
+        ) : (
+          <Menu
+            isShow={isHide}
+            handleHideNavbar={() => {
+              setIsHide(!isHide)
+            }}
+          />
+        )}
 
-      <S.Header>
-        <NarBar />
+        <S.Header>
+          {isHide ? null : <NarBar isShow />}
 
-        <S.ContainerWrapper>
-          <S.ContentContainer>
-            <S.Content>
-              <h1>Casino tiền điện tử được cấp phép đầu tiên trên thế giới</h1>
-              <p className="subContent">Hãy bắt đầu hành trình của bạn với khoản tiền 20% lên đến 10.000USDT</p>
+          <S.ContainerWrapper>
+            <S.ContentContainer>
+              <S.Content>
+                <h1>Casino tiền điện tử được cấp phép đầu tiên trên thế giới</h1>
+                <p className="subContent">Hãy bắt đầu hành trình của bạn với khoản tiền 20% lên đến 10.000USDT</p>
 
-              <S.Regis>
-                <Button
-                  className="register"
-                  size="large"
-                  type="primary"
-                  danger
-                  onClick={() => history.push(`register`)}
-                >
-                  Đăng ký
-                </Button>
-              </S.Regis>
-              <p className="subDetail">Tận hưởng tốc độ giao dịch hàng đầu trong ngành</p>
-            </S.Content>
-            <S.Banner>
-              <Image src={Banner} width={788} preview={false} />
-            </S.Banner>
-          </S.ContentContainer>
+                <S.Regis>
+                  <Button
+                    className="register"
+                    size="large"
+                    type="primary"
+                    danger
+                    onClick={() => history.push(`register`)}
+                  >
+                    Đăng ký
+                  </Button>
+                </S.Regis>
+                <p className="subDetail">Tận hưởng tốc độ giao dịch hàng đầu trong ngành</p>
+              </S.Content>
+              <S.Banner>
+                <Image src={Banner} width={788} preview={false} />
+              </S.Banner>
+            </S.ContentContainer>
 
-          <S.Box>
-            <S.Container>
-              <Slider {...settings}>
-                {dataNav1.map((data) => (
-                  <S.Container onClick={() => history.push(`${data.link}`)}>
-                    <Image className="sidebar_icon" src={data.url} preview={false} />
-                  </S.Container>
+            <S.Box>
+              <S.Container>
+                <Slider {...settings}>
+                  {dataNav1.map((data) => (
+                    <S.Container onClick={() => history.push(`${data.link}`)}>
+                      <Image className="sidebar_icon" src={data.url} preview={false} />
+                    </S.Container>
+                  ))}
+                </Slider>
+              </S.Container>
+            </S.Box>
+            <h1>Trò chơi casino trực tuyến</h1>
+            <S.Container2>
+              <Slider {...settings2}>
+                {gameRooms.map((data) => (
+                  <S.Container2 onClick={() => history.push(`${data.link}`)}>
+                    <S.ImgContainer>
+                      <Image className="roomGame" src={data.url} preview={false} />
+                      <S.OverLay className="mask">
+                        <S.PlayContainer>
+                          <Image className="roomGame" src={PlayTriangleLogo} width={20} preview={false} />
+                        </S.PlayContainer>
+                      </S.OverLay>
+                    </S.ImgContainer>
+                    <p>{data.title}</p>
+                    <p>{data.sub}</p>
+                  </S.Container2>
                 ))}
               </Slider>
-            </S.Container>
-          </S.Box>
-          <h1>Trò chơi casino trực tuyến</h1>
-          <S.Container2>
-            <Slider {...settings2}>
-              {gameRooms.map((data) => (
-                <S.Container2 onClick={() => history.push(`${data.link}`)}>
-                  <S.ImgContainer>
-                    <Image className="roomGame" src={data.url} preview={false} />
-                    <S.OverLay className="mask">
-                      <S.PlayContainer>
-                        <Image className="roomGame" src={PlayTriangleLogo} width={20} preview={false} />
-                      </S.PlayContainer>
-                    </S.OverLay>
-                  </S.ImgContainer>
-                  <p>{data.title}</p>
-                  <p>{data.sub}</p>
-                </S.Container2>
-              ))}
-            </Slider>
-          </S.Container2>
-        </S.ContainerWrapper>
-      </S.Header>
+            </S.Container2>
+          </S.ContainerWrapper>
+        </S.Header>
+      </S.WrapperContainer>
     </S.Wrapper>
   )
 }

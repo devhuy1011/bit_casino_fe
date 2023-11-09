@@ -30,7 +30,8 @@ import { Image } from 'antd'
 import * as S from './style'
 
 interface Props {
-  isShow?: boolean
+  isShow: boolean
+  handleHideNavbar: () => void
 }
 
 const dataNav1 = [
@@ -155,15 +156,10 @@ const dataNav3 = [
   },
 ]
 
-const Menu: React.FC<Props> = ({ isShow }) => {
+const Menu: React.FC<Props> = ({ isShow, handleHideNavbar }) => {
   const history = useHistory()
-  const [isHide, setIsHide] = useState(false)
 
-  const handleHideNavbar = () => {
-    setIsHide(!isHide)
-  }
-
-  return isHide ? (
+  return isShow ? (
     <S.SmallNav>
       <S.LogoSmall onClick={() => history.push('/')}>
         <Image src={SmallLogo} width={30} height={40} preview={false} />

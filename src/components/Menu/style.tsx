@@ -210,8 +210,6 @@ export const SmallNav = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  position: fixed;
-  top: 25px;
 `
 export const ArrowPre = styled.div`
   display: flex;

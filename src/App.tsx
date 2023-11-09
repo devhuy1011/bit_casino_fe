@@ -7,6 +7,7 @@ import Loading from 'components/LoadingNew'
 import HomePage from 'views/Global'
 import SignPage from 'views/SignIn'
 import LoginPage from 'views/Login'
+import VipPage from 'views/Vip'
 
 import history from './routerHistory'
 import GlobalStyle from './style/Global'
@@ -27,6 +28,9 @@ const App: React.FC = () => {
           </Route>
           <Route exact path="/register">
             <SignPage />
+          </Route>
+          <Route exact path="/vip">
+            <VipPage/>
           </Route>
         </>
       </Router>

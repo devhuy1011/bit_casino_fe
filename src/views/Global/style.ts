@@ -1,3 +1,4 @@
+import { flexbox } from 'styled-system'
 import styled from 'styled-components'
 import color from 'style/color'
 import Arrow from 'assets/logo/Arrow.png'
@@ -5,9 +6,19 @@ import Arrow from 'assets/logo/Arrow.png'
 export const Wrapper = styled.div`
   width: 100%;
   height: 100vh;
-  display: flex;
   padding: 0;
   margin: 0;
+  .default {
+    display: flex;
+    flex-direction: column;
+  }
+  .flex-box {
+    display: flex;
+    flex-direction: row;
+  }
+`
+export const WrapperContainer = styled.div`
+  width: 100%;
 `
 export const Header = styled.div`
   width: 1584px;
@@ -268,4 +279,10 @@ export const ImgContainer = styled.div`
   .mask:hover {
     opacity: 1;
   }
+`
+export const MenuContainer = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
 `

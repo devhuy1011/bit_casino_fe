@@ -2,13 +2,30 @@ import color from 'style/color'
 import styled from 'styled-components'
 
 export const BoxContainer = styled.div`
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0px;
-  z-index: 10;
-  overflow: auto;
-
-  background-color: #fff;
+  .flex-box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .default-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (min-width: 1500px){
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+    min-width: 1200px;
+  }
+  .sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+  }
+  .none {
+    position: static;
+  }
 `
 
 export const Box = styled.div`
@@ -36,10 +53,13 @@ export const Box = styled.div`
 `
 export const Container = styled.div`
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 16px 0px;
+  .hidden {
+    display: none;
+  }
+  .active {
+    display: block;
+  }
 `
 export const ButtonHandlerContainer = styled.div`
   width: auto;

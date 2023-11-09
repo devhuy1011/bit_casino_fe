@@ -30,7 +30,7 @@ const App: React.FC = () => {
             <SignPage />
           </Route>
           <Route exact path="/vip">
-            <VipPage/>
+            <VipPage />
           </Route>
         </>
       </Router>

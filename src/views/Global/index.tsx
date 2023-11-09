@@ -26,6 +26,8 @@ import PlayTriangleLogo from 'assets/images/play-triangle.svg'
 import BombayBaccaratImg from 'assets/images/BombayClub-Speed-Baccarat_490x368px.png'
 import BombayBlackJackImg from 'assets/images/BombayClubBlackjack_490x368px.png'
 import BombayRouletteImg from 'assets/images/BombayClubRoulette_490x368px.png'
+import CustomBox from 'components/CustomBox'
+import { NEW_GAME } from './constant'
 
 /** Style */
 import * as S from './style'
@@ -293,61 +295,73 @@ const Global: React.FC<Props> = () => {
         <S.Header>
           {isHide ? null : <NarBar isShow />}
 
-          <S.ContainerWrapper>
-            <S.ContentContainer>
-              <S.Content>
-                <h1>Casino tiền điện tử được cấp phép đầu tiên trên thế giới</h1>
-                <p className="subContent">Hãy bắt đầu hành trình của bạn với khoản tiền 20% lên đến 10.000USDT</p>
+          <S.ContentContainer>
+            <S.Content>
+              <h1>Casino tiền điện tử được cấp phép đầu tiên trên thế giới</h1>
+              <p className="subContent">Hãy bắt đầu hành trình của bạn với khoản tiền 20% lên đến 10.000USDT</p>
 
-                <S.Regis>
-                  <Button
-                    className="register"
-                    size="large"
-                    type="primary"
-                    danger
-                    onClick={() => history.push(`register`)}
-                  >
-                    Đăng ký
-                  </Button>
-                </S.Regis>
-                <p className="subDetail">Tận hưởng tốc độ giao dịch hàng đầu trong ngành</p>
-              </S.Content>
-              <S.Banner>
-                <Image src={Banner} width={788} preview={false} />
-              </S.Banner>
-            </S.ContentContainer>
+              <S.Regis>
+                <Button
+                  className="register"
+                  size="large"
+                  type="primary"
+                  danger
+                  onClick={() => history.push(`register`)}
+                >
+                  Đăng ký
+                </Button>
+              </S.Regis>
+              <p className="subDetail">Tận hưởng tốc độ giao dịch hàng đầu trong ngành</p>
+            </S.Content>
+            <S.Banner>
+              <Image src={Banner} width={788} preview={false} />
+            </S.Banner>
+          </S.ContentContainer>
 
-            <S.Box>
-              <S.Container>
-                <Slider {...settings}>
-                  {dataNav1.map((data) => (
-                    <S.Container onClick={() => history.push(`${data.link}`)}>
-                      <Image className="sidebar_icon" src={data.url} preview={false} />
-                    </S.Container>
-                  ))}
-                </Slider>
-              </S.Container>
-            </S.Box>
-            <h1>Trò chơi casino trực tuyến</h1>
-            <S.Container2>
-              <Slider {...settings2}>
-                {gameRooms.map((data) => (
-                  <S.Container2 onClick={() => history.push(`${data.link}`)}>
-                    <S.ImgContainer>
-                      <Image className="roomGame" src={data.url} preview={false} />
-                      <S.OverLay className="mask">
-                        <S.PlayContainer>
-                          <Image className="roomGame" src={PlayTriangleLogo} width={20} preview={false} />
-                        </S.PlayContainer>
-                      </S.OverLay>
-                    </S.ImgContainer>
-                    <p>{data.title}</p>
-                    <p>{data.sub}</p>
-                  </S.Container2>
+          <S.Box>
+            <S.Container>
+              <Slider {...settings}>
+                {dataNav1.map((data) => (
+                  <S.Container onClick={() => history.push(`${data.link}`)}>
+                    <Image className="sidebar_icon" src={data.url} preview={false} />
+                  </S.Container>
                 ))}
               </Slider>
-            </S.Container2>
-          </S.ContainerWrapper>
+            </S.Container>
+          </S.Box>
+          <h1>Trò chơi casino trực tuyến</h1>
+          <S.Container2>
+            <Slider {...settings2}>
+              {gameRooms.map((data) => (
+                <S.Container2 onClick={() => history.push(`${data.link}`)}>
+                  <Image className="roomGame" src={data.url} width={202} preview={false} />
+                  <S.OverLay className="mask">
+                    <S.PlayContainer>
+                      <Image className="roomGame" src={PlayTriangleLogo} width={20} preview={false} />
+                    </S.PlayContainer>
+                  </S.OverLay>
+                  <p>{data.title}</p>
+                  <p>{data.sub}</p>
+                </S.Container2>
+              ))}
+            </Slider>
+          </S.Container2>
+          <h1>Trò chơi casino với Live RTF</h1>
+          <S.Container2>
+            <Slider {...settings2}>
+              {gameRooms.map((data) => (
+                <CustomBox link={data.link} url={data.url} title={data.title} sub={data.sub} />
+              ))}
+            </Slider>
+          </S.Container2>
+          <h1>Trò chơi mới bạn có thể thích</h1>
+          <S.Container2>
+            <Slider {...settings2}>
+              {NEW_GAME.map((data) => (
+                <CustomBox link={data.link} url={data.url} title={data.title} sub={data.sub} />
+              ))}
+            </Slider>
+          </S.Container2>
         </S.Header>
       </S.WrapperContainer>
     </S.Wrapper>

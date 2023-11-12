@@ -2,6 +2,11 @@ import color from 'style/color'
 import styled from 'styled-components'
 
 export const BoxContainer = styled.div`
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 10;
+  background-color: #fff;
   .flex-box {
     display: flex;
     justify-content: flex-end;
@@ -11,20 +16,10 @@ export const BoxContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @media (min-width: 1500px){
-      padding-left: 2rem;
-      padding-right: 2rem;
+    @media (min-width: 1500px) {
+      width: 99rem;
     }
     min-width: 1200px;
-  }
-  .sticky {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0px;
-    z-index: 10;
-  }
-  .none {
-    position: static;
   }
 `
 

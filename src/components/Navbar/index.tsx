@@ -9,15 +9,14 @@ import * as S from './style'
 interface Props {
   value?: string
   isShow?: boolean
-  backgroundColor?: string
 }
 const { Search } = Input
 
-const NavbarElement: React.FC<Props> = ({ value, isShow, backgroundColor }) => {
+const NavbarElement: React.FC<Props> = ({ value, isShow }) => {
   const history = useHistory()
 
   return (
-    <S.BoxContainer style={{ backgroundColor }} className={isShow ? 'none' : 'sticky'}>
+    <S.BoxContainer>
       <S.Box>
         <S.Container className={isShow ? 'default-nav' : 'flex-box'}>
           <Space.Compact size="large" className={isShow ? 'search active' : 'hidden'}>

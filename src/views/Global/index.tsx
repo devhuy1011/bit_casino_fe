@@ -27,6 +27,7 @@ import BombayBaccaratImg from 'assets/images/BombayClub-Speed-Baccarat_490x368px
 import BombayBlackJackImg from 'assets/images/BombayClubBlackjack_490x368px.png'
 import BombayRouletteImg from 'assets/images/BombayClubRoulette_490x368px.png'
 import CustomBox from 'components/CustomBox'
+import Footer from 'components/Footer'
 import { NEW_GAME } from './constant'
 
 /** Style */
@@ -362,6 +363,7 @@ const Global: React.FC<Props> = () => {
               ))}
             </Slider>
           </S.Container2>
+          <Footer />
         </S.Header>
       </S.WrapperContainer>
     </S.Wrapper>

@@ -3,14 +3,14 @@ import styled from 'styled-components'
 
 export const Box = styled.div`
   width: auto;
-  height: 100%;
+  height: 200vh;
   box-sizing: border-box;
   border: 0 solid #e5e7eb;
 `
 
 export const Container = styled.div`
   width: auto;
-  height: auto;
+  height: 200vh;
   padding: 1.25rem;
   background-color: #f2f2f2;
   position: relative;
@@ -205,6 +205,16 @@ export const ArrowContainer = styled.div`
   }
 `
 
+export const SmallContainer = styled.div`
+  .vip-position {
+    position: fixed;
+    top: 20px;
+    left: 10px;
+  }
+  .default-slick {
+    position: static;
+  }
+`
 export const SmallNav = styled.div`
   width: 80px;
   display: flex;

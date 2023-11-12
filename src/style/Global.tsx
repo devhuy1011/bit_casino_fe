@@ -11,6 +11,11 @@ import { createGlobalStyle } from 'styled-components'
 import Fonts from 'assets/font/font'
 
 const GlobalStyle = createGlobalStyle`
+    @tailwind base;
+@tailwind components;
+@tailwind utilities;
+    
+
  @font-face {
   font-family: 'NotoSansCJKkrBlack';
   src: url(${Fonts.NotoSansCJKkrBlack}) format('woff');
@@ -45,6 +50,7 @@ const GlobalStyle = createGlobalStyle`
     color: #000;
     flex-grow: 0;
     margin: 0px;
+    height: 100vh;
     /* background-color: #f5f9fc; */
     
     img {

@@ -285,4 +285,9 @@ export const MenuContainer = styled.div`
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 10;
 `
